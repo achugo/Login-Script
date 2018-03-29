@@ -31,6 +31,6 @@ session_start();
 <a href="register.php">Register</a>
 
 <?php endif; ?>
-<?php echo md5("izunna"); ?>
+
 </body>
 </html>
