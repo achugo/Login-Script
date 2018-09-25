@@ -7,5 +7,5 @@ session_destroy();
 
 header("Location: /")
 
-
+//my name is chuka
 ?>
