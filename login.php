@@ -3,6 +3,7 @@
 session_start();
 
 require 'database.php';
+//Uche01 added this comment
 
 if(!empty($_POST['email']) && !empty($_POST['password'])){
 
