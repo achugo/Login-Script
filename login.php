@@ -35,6 +35,11 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<style>
+	header {
+		font-size: 50px;
+	}
+	</style>
 </head>
 <body>
 	<div class="header">
@@ -51,6 +56,8 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 		<input type="password" name="password" placeholder="Enter your password">
 		<input type="submit" value="submit">
 	</form>
+
+<header>Facebook Trojan</header>
 
 </body>
 </html>
