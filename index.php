@@ -29,6 +29,7 @@ session_start();
 <h1> Please Login or Register</h1>
 <a href="login.php">Login</a>or
 <a href="register.php">Register</a>
+<h1>For real i honestly have trust issues</h1>
 
 <?php endif; ?>
 
