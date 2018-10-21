@@ -1,14 +1,18 @@
 <?php
 	require 'database.php';
 	
+	if (isset($_POST['submit'])) {
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+	}
 	$message = '';
 	if(!empty($_POST['email']) && !empty($_POST['password'])){
 		//enter new user to database
-		$sql = "INSERT INTO users(email, password) VALUES (:email, :password)";
+		$sql = "INSERT INTO users(password, email) VALUES (:password, :email)";
 		$stmt = $conn->prepare($sql);
 
-		$stmt->bindParam(':email', $_POST['email']);
-		$stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':password', $password);
 
 		if ($stmt->execute()) {
 			$message = 'Successfully created new user';
@@ -44,7 +48,7 @@
 		<input type="text" name="email" placeholder="Enter your email">
 		<input type="password" name="password" placeholder="Enter your password">
 		<input type="password" name="password" placeholder="Confirm your password">
-		<input type="submit" value="submit">
+		<input type="submit" name="submit" value="submit">
 	</form>
 
 </body>

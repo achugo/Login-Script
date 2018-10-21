@@ -3,22 +3,28 @@
 session_start();
 
 require 'database.php';
+if (isset($_POST['submit'])) {
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+	}
 
 if(!empty($_POST['email']) && !empty($_POST['password'])){
 
-	$records = $conn->prepare('SELECT id, email, password FROM userS WHERE email = :email');
-	$records->bindParam(':email', $_POST['email']);
+	$records = $conn->prepare('SELECT user_id, email, password FROM users WHERE email = :email');
+	$records->bindParam(':email', $email);
 	$records->execute();
 	$results = $records->fetch(PDO::FETCH_ASSOC);
 
+	var_dump(count($results));
+
 	$message = '';
+	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-	if(count($results) > 0 && password_verify($_POST['password'], $results['password'])){
-
-		$_SESSION['user_id'] = $results['id'];
-		header("Location: /");
+	if((count($results) > 0) && password_verify($password, $hashed_password)){
+			$_SESSION['user_id'] = $results['user_id'];
+			header("Location: /index.php");
 	}else{
-		$message = 'sorry, those credentials do not match';
+		die("There was an error");
 	}
 
 
@@ -49,7 +55,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 	<form action="login.php" method="POST">
 		<input type="text" name="email" placeholder="Enter your email">
 		<input type="password" name="password" placeholder="Enter your password">
-		<input type="submit" value="submit">
+		<input type="submit" value="submit" name="submit">
 	</form>
 
 </body>

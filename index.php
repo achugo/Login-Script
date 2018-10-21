@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
 	<div class="header">
-		<a href="#">Your App name</a>
+		<a href="#">First autodeploy</a>
 	</div>
 
 <?php if(isset($_SESSION['user_id'])): ?>
