@@ -342,7 +342,7 @@
       <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +2348117894029</p>
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: earthplus@gmail.com</p>
       <br>
-      <form id="myForm" onsubmit="submitform(); return false" method="POST">
+      <form id="myForm" onsubmit="submitForm(); return false" method="POST">
         <p><input class="w3-input w3-border" id="name" type="text" placeholder="Name" required name="name"></p>
         <p><input class="w3-input w3-border" id="email" type="text" placeholder="Email" required name="email"></p>
         <p><input class="w3-input w3-border" id="subject"  type="text" placeholder="Subject" required name="subject"></p>
