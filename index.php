@@ -77,12 +77,12 @@
       <p>The earth is the only habitat we have, the only environment we can survive in. It is our duty to keep the earth alive. This is what Earthplus is doing</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-cloud-tree w3-margin-bottom w3-jumbo"></i>
+      <i class="fa fa-cloud w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Protect the environment</p>
       <p>The earth is the only habitat we have, the only environment we can survive in. It is our duty to keep the earth alive. This is what Earthplus is doing</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-cloud w3-margin-bottom w3-jumbo"></i>
+      <i class="fa fa-globe w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Save the climate</p>
       <p>The earth is the only habitat we have, the only environment we can survive in. It is our duty to keep the earth alive. This is what Earthplus is doing.</p>
     </div>
@@ -174,31 +174,31 @@
   <p class="w3-center w3-large">What we've done for people</p>
 
   <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="images/1.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
+      <img src="images/1.jpg" class="gallery"  onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/2.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/3.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/4.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
     </div>
   </div>
 
   <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/5.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/6.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/7.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
     </div>
-    <div class="w3-col l3 m6">
+    <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
       <img src="images/8.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
     </div
   </div>
@@ -241,20 +241,20 @@
 </div>
 
 <!-- Donate Section -->
-<div class="w3-container w3-dark-grey"  id="donate">
-  <h3>DONATE</h3>
+<div class="w3-container w3-dark-grey"  id="donate" style="padding-left:0px !important; padding-right:0px !important">
+  <h3 class="w3-center">DONATE</h3>
   <p class="w3-large w3-center">Support Earthplus.</p>
   <div class="w3-row-padding">
     <div class="w3-half w3-section">
       <div class="w3-ul w3-white w3-hover-shadow padding-bottom">
             <p class="w3-black w3-xlarge w3-center w3-padding-32">Pay Online</p>
-        <form action="/action_page.php" target="_blank" class="padding-30">
-            <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Amount" required name="Amount"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Phone Number" required name="Phone No"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+            <form target="_blank" class="padding-30">
+            <p><input class="w3-input w3-border" id="customerName" type="text" placeholder="Name" required name="Name"></p>
+            <p><input class="w3-input w3-border" id="donateAmt" type="text" placeholder="Amount" required name="Amount"></p>
+            <p><input class="w3-input w3-border" id="phoneNo" type="text" placeholder="Phone Number" required name="Phone No"></p>
+            <p><input class="w3-input w3-border" id="email" type="text" placeholder="Email" required name="Email"></p>
             <p>
-            <button class="w3-button w3-black"  onclick="payWithPaystack()">
+            <button class="w3-button w3-black" type="submit"  onclick="payWithPaystack()">
                 <i class="fa fa-paper-plane"></i> PAY
             </button>
             </p>
@@ -263,18 +263,19 @@
                   
                    
                   <script>
+                    function _(id){ return document.getElementById(id); }
                     function payWithPaystack(){
                       var handler = PaystackPop.setup({
                         key: 'pk_test_39d67628ea0d41f0f9651e83a558ffe56f55d940',
-                        email: 'eachugo@email.com',
-                        amount: 10000,
+                        email: _("email").value,
+                        amount: _("donateAmt").value,
                         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
                         metadata: {
                            custom_fields: [
                               {
-                                  display_name: "Mobile Number",
+                                  display_name: _("customerName").value,
                                   variable_name: "mobile_number",
-                                  value: "+2348012345678"
+                                  value: _("phoneNo").value
                               }
                            ]
                         },
