@@ -175,31 +175,31 @@
 
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/1.jpg" class="gallery"  onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+      <img src="images/1.jpg" class="gallery"  onclick="onClick(this)" class="w3-hover-opacity" alt="Earthplus cleans Lagos">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/2.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+      <img src="images/2.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Earthplus washes Lagos">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/3.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+      <img src="images/3.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Earthplus free Service">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/4.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+      <img src="images/4.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Environmental Sanitation">
     </div>
   </div>
 
   <div class="w3-row-padding w3-section">
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/5.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+      <img src="images/5.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Volunteer cleanup">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/6.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+      <img src="images/6.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Climate refurbishing">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/7.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+      <img src="images/7.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Earthplus in action">
     </div>
     <div class="w3-col l3 m6 gallery__mobile" style="margin-bottom:10px;">
-      <img src="images/8.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+      <img src="images/8.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Sample earthplus picture">
     </div
   </div>
 </div>
@@ -213,7 +213,7 @@
   </div>
 </div>
 
-<!-- Skills Section -->
+Skills Section
 <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
