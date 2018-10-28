@@ -248,7 +248,7 @@ Skills Section
     <div class="w3-half w3-section">
       <div class="w3-ul w3-white w3-hover-shadow padding-bottom">
             <p class="w3-black w3-xlarge w3-center w3-padding-32">Pay Online</p>
-            <form target="_blank" class="padding-30">
+            <form class="padding-30">
             <p><input class="w3-input w3-border" id="customerName" type="text" placeholder="Name" required name="Name"></p>
             <p><input class="w3-input w3-border" id="donateAmt" type="text" placeholder="Amount" required name="Amount"></p>
             <p><input class="w3-input w3-border" id="phoneNo" type="text" placeholder="Phone Number" required name="Phone No"></p>
