@@ -168,7 +168,7 @@
   </div>
 </div>
 
-<!-- Work Section -->
+<!-- Work Section
 <div class="w3-container" style="padding:128px 16px" id="work">
   <h3 class="w3-center">OUR WORK</h3>
   <p class="w3-center w3-large">What we've done for people</p>
@@ -202,7 +202,7 @@
       <img src="images/8.jpg" class="gallery" onclick="onClick(this)" class="w3-hover-opacity" alt="Sample earthplus picture">
     </div
   </div>
-</div>
+</div> -->
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
