@@ -214,8 +214,8 @@
   </div>
 </div>
 
-Skills Section
-<div class="w3-container w3-light-grey w3-padding-64">
+<!-- Skills Section -->
+<!-- <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Our Skills.</h3>
@@ -239,7 +239,7 @@ Skills Section
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Donate Section -->
 <div class="w3-container w3-dark-grey"  id="donate" style="padding-left:0px !important; padding-right:0px !important">
